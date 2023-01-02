@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <Container fluid className=' bg-primary bg-gradient'  style={{height:100}}>
     <Row>
-    <Col style={{fontSize:50, fontWeight:'bold'}}>The Generics</Col>
+    <Col style={{fontSize:50, fontWeight:'bold',display:'flex',alignItems:'center', justifyContent:'center' }}>The Generics</Col>
       <Col style={{display:'flex',alignItems:'center', justifyContent:'center'}}>
       
       <Row>

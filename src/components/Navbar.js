@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/esm/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import ModalCard from './UI/Modal';
 
 const Navb = () => {
   return (
@@ -16,7 +17,9 @@ const Navb = () => {
         </Container>
       
       <Container>
-      <Button variant="primary">Cart</Button>{' '}
+      <Button variant="primary">
+      <ModalCard />
+        </Button>{' '}
       </Container>
       </Container>
     </Navbar>

@@ -1,14 +1,12 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/esm/Button';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import ModalCard from './UI/Modal';
 
 const Navb = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar className='sticky-top' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
       <Container>
         <Navbar.Brand href="#home">Home</Navbar.Brand>
@@ -16,10 +14,11 @@ const Navb = () => {
         <Navbar.Brand href="#home">About</Navbar.Brand>
         </Container>
       
-      <Container>
+      <Container style={{color:'white'}}>
       <Button variant="primary">
       <ModalCard />
-        </Button>{' '}
+        </Button>
+        {1}
       </Container>
       </Container>
     </Navbar>

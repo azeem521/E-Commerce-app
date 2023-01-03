@@ -1,11 +1,12 @@
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/esm/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 
 import Modal from 'react-bootstrap/Modal';
+import cartContext from '../../store/cart-context';
 import CartItem from './CartItem';
 
 
@@ -57,12 +58,15 @@ const ModalCard = () => {
 
     const [show, setShow] = useState(false);
 
+    const crtCtx=useContext(cartContext);
+
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
 
-    const CartList=<ul>{cartElements.map((e)=>(
-        <CartItem title={e.title} price={e.price} img={e.imageUrl} qty={e.quantity} />
+    const CartList=<ul>{crtCtx.item.map((e)=>(
+        <CartItem title={e.title} price={e.price} img={e.img} qty={e.quantity} />
     ))}</ul>
   
 

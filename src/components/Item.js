@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/esm/Button';
+import cartContext from '../store/cart-context';
 
 const Item = (props) => {
 
+    const crtCtx=useContext(cartContext)
+
     const title=props.title;
     const img=props.img;
-    const price=props.price
+    const price=props.price;
+
+    const addtoCartHandler =(e)=>{
+        e.preventDefault();
+        crtCtx.addItem({
+          title:props.title,
+          img:props.img,
+          price:props.price
+        })
+        console.log(crtCtx);
+    }
 
 
   return (
@@ -18,7 +31,7 @@ const Item = (props) => {
     <Card.Title>
    {price}
     </Card.Title>
-    <Button variant="primary">ADD TO CART</Button>
+    <Button type='submit' onClick={addtoCartHandler}  variant="primary">ADD TO CART</Button>
     </Card.Body>
     </Card>
     </>

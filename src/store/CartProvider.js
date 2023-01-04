@@ -25,7 +25,6 @@ const CartProvider = (props) => {
   return (
     <cartContext.Provider value={CartContext}>
         {props.children }
-        console.log(items);
     </cartContext.Provider>
   )
 }

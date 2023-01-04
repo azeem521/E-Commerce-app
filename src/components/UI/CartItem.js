@@ -4,21 +4,28 @@ import Col from 'react-bootstrap/esm/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Card from 'react-bootstrap/Card';
+import './Modal.css';
 
 const CartItem = (props) => {
   return (
-    <Container style={{width:'20',height:'20'}}>
+    <Container className='container' >
     
-    <Row  style={{width:'20',height:'20'}}>
+    <Row  className='container'>
       <Col>
       <Row>
         <Col>{props.title}</Col>
         <Col>
-        <Card.Img variant="top" src={props.img} />
+        {/* <div  style={{width:'30',height:'30'}}> */}
+
+        <Card.Img  className='col-img' variant="top" src={props.img} />
+        {/* </div> */}
+        
+
+
         </Col>
       </Row>
       </Col>
-      <Col>{props.qty}
+      <Col>1
 
       </Col>
       <Col>{props.price}</Col>

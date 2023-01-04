@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/esm/Row';
 import Modal from 'react-bootstrap/Modal';
 import cartContext from '../../store/cart-context';
 import CartItem from './CartItem';
+import './Modal.css';
 
 
 
@@ -76,7 +77,7 @@ const ModalCard = () => {
         Card
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal dialogClassName="my-modal" show={show} onHide={handleClose}>
         <Modal.Header closeButton  >
           <Modal.Title>CART</Modal.Title>
         </Modal.Header>

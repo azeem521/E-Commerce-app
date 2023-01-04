@@ -1,0 +1,13 @@
+.my-modal {
+    width: 90vw;
+    max-width: 90vw;
+} 
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+.col-img{
+    height: 100%;
+    width: 100%;
+}

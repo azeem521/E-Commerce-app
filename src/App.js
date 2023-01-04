@@ -1,23 +1,30 @@
 
 
-import React from 'react';
+// import React from 'react';
 import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Items from './components/Items';
-import Main from './components/Main';
 import Navb from './components/Navbar';
-import SeeCard from './components/SeeCard';
+import HomeWrapper from './components/HomeWrapper';
 import CartProvider from './store/CartProvider';
+import { Route } from 'react-router-dom';
+import Header from './components/Home/Header';
+import Footer from './components/Home/Footer';
+import About from './components/About/About';
 
 function App() {
   return (
     <CartProvider>
-     <Navb />
+       <Navb />
      <Header />
-     <Main />
-     <Items />
-     <SeeCard />
+       <main>
+        <Route path='/home'>
+           <HomeWrapper />
+        </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
+
+       </main>
+       
      <Footer />
     </CartProvider>
   );

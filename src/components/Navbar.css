@@ -1,0 +1,12 @@
+.link-container{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navLinks{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}

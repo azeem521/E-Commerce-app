@@ -10,6 +10,7 @@ import Header from './components/Home/Header';
 import Footer from './components/Home/Footer';
 import About from './components/About/About';
 import Store from './components/store/Store';
+import ContactUs from './components/contactUs/ContactUs';
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
         </Route>
         <Route path='/store'>
           <Store />
+        </Route>
+
+        <Route path='/contact'>
+          <ContactUs />
         </Route>
 
        </main>

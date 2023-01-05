@@ -10,8 +10,8 @@ const Navb = () => {
     <Navbar className='sticky-top' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
       <Container>
-        <NavLink to="/home">Home</NavLink>
-        <NavLink to="/home">Store</NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/store">Store</NavLink>
         <NavLink to="/about">About</NavLink>
         </Container>
       

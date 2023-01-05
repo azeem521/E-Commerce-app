@@ -9,6 +9,7 @@ import { Route } from 'react-router-dom';
 import Header from './components/Home/Header';
 import Footer from './components/Home/Footer';
 import About from './components/About/About';
+import Store from './components/store/Store';
 
 function App() {
   return (
@@ -16,11 +17,14 @@ function App() {
        <Navb />
      <Header />
        <main>
-        <Route path='/home'>
+        <Route path='//'>
            <HomeWrapper />
         </Route>
         <Route path='/about'>
           <About />
+        </Route>
+        <Route path='/store'>
+          <Store />
         </Route>
 
        </main>

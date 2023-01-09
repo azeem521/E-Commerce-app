@@ -23,6 +23,9 @@ export const AuthContextProvider=(props)=>{
 
     const userIsLoggedIn=!!token;
 
+    // const userIsLoggedIn =true;
+
+
     const logoutHandler=()=>{
         setToken(null);
         localStorage.removeItem('token')
@@ -35,6 +38,7 @@ export const AuthContextProvider=(props)=>{
         const remainingTime=calculateRemainingTime(expirationTime);
 
         setTimeout(logoutHandler,remainingTime);
+       
     };
 
 

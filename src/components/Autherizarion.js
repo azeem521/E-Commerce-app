@@ -2,9 +2,7 @@ import React from 'react'
 import { useContext, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import AuthContext from './AuthContext/Auth-context';
-// import AuthContext from '../../store/auth-context';
-
-import classes from './AuthForm.module.css'
+import classes from './Authrization.module.css'
 
 const Autherizarion = () => {
 
@@ -63,12 +61,13 @@ const Autherizarion = () => {
         }).then((data)=>{
           const expirationTime=new Date(new Date().getTime()+(+data.expiresIn*1000))
           authCtx.login(data.idToken,expirationTime.toISOString())
-          history.replace('/')
+          
+         
+          history.replace('/home')
         }).catch((err)=>{
           console.log(err);
           alert(err)
         })
-      // }
   
     }
 

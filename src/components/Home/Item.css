@@ -1,0 +1,32 @@
+
+.main-container{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrapper{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-div{
+/* align-items: center; */
+
+}
+
+.img-div{
+    width: 50px;
+    height: auto;
+    border: 1px solid red;
+}
+
+.footer-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

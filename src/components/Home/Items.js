@@ -51,19 +51,38 @@ const Items = () => {
         
         ];
 
+        const even=productsArr.filter((item)=>productsArr.indexOf(item)%2===0);
+
+        const odd=productsArr.filter((item)=>productsArr.indexOf(item)%2!==0);
+        
+
+        
+  const prdList = (
+    <ul>
+      {even.map((e) => (
+        <Item title={e.title} img={e.imageUrl} price={e.price} />
+      ))}
+    </ul>
+  );
+
+  const prdList2 = (
+    <ul>
+      {odd.map((e) => (
+        <Item title={e.title} img={e.imageUrl} price={e.price} />
+      ))}
+    </ul>
+  );
 
 
+// const prdList=<ul>
+//     {
+//         productsArr.map((e)=>(
 
-
-const prdList=<ul>
-    {
-        productsArr.map((e)=>(
-
-                <Item title={e.title} img={e.imageUrl} price={e.price} />
+//                 <Item title={e.title} img={e.imageUrl} price={e.price} />
             
-        ))
-    }
-</ul>
+//         ))
+//     }
+// </ul>
 
 
 
@@ -75,7 +94,7 @@ const prdList=<ul>
             {prdList}
         </Col>
         <Col>
-            {prdList}
+            {prdList2}
         </Col>
       </Row>
     </Container>
